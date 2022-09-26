@@ -1,0 +1,114 @@
+@default-font-weight-btn: 700;
+@default-bg-color-disabled-btn: #bababa;
+
+// for custom style button
+.custom-button(@border-radius;
+  @font-weight;
+  @padding-x;
+  @space-x;
+) {
+  border-radius: @border-radius;
+  font-weight: @font-weight;
+  padding-left: @padding-x;
+  padding-right: @padding-x;
+  column-gap: @space-x;
+  display: inline-flex;
+  align-items: center;
+}
+
+// for custom icon inside custom button
+.custom-icon(@icon-size) {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: @icon-size;
+
+  svg {
+    width: @icon-size;
+    height: @icon-size;
+    position: absolute;
+  }
+}
+
+.custom-disabled-button() {
+  background-color: @default-bg-color-disabled-btn;
+  opacity: 1;
+}
+
+// override class in rsuite/Button/styles/index.less
+.rs-btn-primary {
+  // override disabled button style
+  &.rs-btn-disabled {
+   .custom-disabled-button();
+  }
+}
+
+// override function in rsuite/Button/styles/mixin.less
+.button-size-lg() {
+  @icon-size: 24px;
+  @space-x: 8px;
+
+  .button-size(@height: 44px;
+    @space-x;
+    @font-size: 16px;
+    @line-height: 16px;
+    @icon-size;
+  );
+
+  .custom-button(@border-radius: 61px;
+    @font-weight: @default-font-weight-btn;
+    @padding-x: 20px;
+    @space-x;
+  );
+
+  .rs-container-icon {
+    .custom-icon(@icon-size);
+  }
+}
+
+// override function in rsuite/Button/styles/mixin.less
+.button-size-md() {
+  @icon-size: 20px;
+  @space-x: 6px;
+
+  .button-size(@height: 36px;
+    @space-x;
+    @font-size: 12px;
+    @line-height: 12px;
+    @icon-size;
+  );
+
+  .custom-button(@border-radius: 61px;
+    @font-weight: @default-font-weight-btn;
+    @padding-x: 16px;
+    @space-x;
+  );
+
+  .rs-container-icon {
+    .custom-icon(@icon-size);
+  }
+}
+
+// override function in rsuite/Button/styles/mixin.less
+.button-size-sm() {
+  @icon-size: 16px;
+  @space-x: 4px;
+
+  .button-size(@height: 26px;
+    @space-x;
+    @font-size: 10px;
+    @line-height: 10px;
+    @icon-size;
+  );
+
+  .custom-button(@border-radius: 23px;
+    @font-weight: @default-font-weight-btn;
+    @padding-x: 12px;
+    @space-x;
+  );
+
+  .rs-container-icon {
+    .custom-icon(@icon-size);
+  }
+}
