@@ -1,5 +1,6 @@
 @default-font-weight-btn: 700;
 @default-bg-color-disabled-btn: #bababa;
+@btn-loading-spin-default-diameter: 12px;
 
 // for custom style button
 .custom-button(@border-radius;
@@ -40,7 +41,7 @@
 .rs-btn-primary {
   // override disabled button style
   &.rs-btn-disabled {
-   .custom-disabled-button();
+    .custom-disabled-button();
   }
 }
 
@@ -110,5 +111,46 @@
 
   .rs-container-icon {
     .custom-icon(@icon-size);
+  }
+}
+
+.custom-loading-spinner(@spinner-size) {
+  > .rs-btn-spin {
+    width: @spinner-size;
+    height: @spinner-size;
+
+    &::before,
+    &::after {
+      content: '';
+      position: absolute;
+      width: @spinner-size;
+      height: @spinner-size;
+    }
+  }
+}
+
+// override class in rsuite/Button/styles/index.less
+.rs-btn-loading {
+  color: white !important;
+
+  // Spinner
+  > .rs-btn-spin {
+    position: relative;
+  }
+
+  &.rs-btn{
+    .custom-loading-spinner( @spinner-size : 12px);
+  }
+
+  &.rs-btn-sm {
+    .custom-loading-spinner( @spinner-size : 10px);
+  }
+
+  &.rs-btn-md {
+    .custom-loading-spinner( @spinner-size : 12px);
+  }
+
+  &.rs-btn-lg {
+    .custom-loading-spinner( @spinner-size : 16px);
   }
 }
