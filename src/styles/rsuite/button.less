@@ -129,9 +129,14 @@
   }
 }
 
+
 // override class in rsuite/Button/styles/index.less
 .rs-btn-loading {
   color: white !important;
+
+  &.rs-btn-default{
+    color: var(--rs-btn-default-text) !important;
+  }
 
   // Spinner
   > .rs-btn-spin {
