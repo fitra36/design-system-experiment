@@ -132,10 +132,23 @@
 
 // override class in rsuite/Button/styles/index.less
 .rs-btn-loading {
-  color: white !important;
+  color: unset !important; 
 
   &.rs-btn-default{
     color: var(--rs-btn-default-text) !important;
+  }
+  
+  &.rs-btn-primary{
+    color: white !important;
+  }
+
+  &.rs-btn-primary.rs-btn-secondary{
+    &:not(.rs-btn-disabled){
+      color: #6913D8 !important;
+    }
+    &.rs-btn-disabled{
+      color: #BABABA !important;
+    }
   }
 
   // Spinner
@@ -158,4 +171,33 @@
   &.rs-btn-lg {
     .custom-loading-spinner( @spinner-size : 16px);
   }
+}
+
+
+.rs-btn-primary.rs-btn-secondary {
+  color: #6913D8;
+  background-color: #F4F2FF;
+  border: none;
+
+  .button-activated({
+    color: #6913D8;
+    background-color: #F4F2FF;
+  });
+
+  .button-pressed({
+    color: #6913D8;
+    background-color: #F4F2FF;
+  });
+
+  .button-disabled({
+    color: #BABABA;
+    background-color: rgba(0, 0, 0, 0);
+    border: 1px solid #BABABA;
+  });
+
+  // .rs-btn-disabled.rs-btn-loading{
+  //   color: #BABABA !important;
+  //   background-color: rgba(0, 0, 0, 0);
+  //   border: 1px solid #BABABA;
+  // }
 }

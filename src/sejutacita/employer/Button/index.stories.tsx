@@ -14,7 +14,7 @@ export default {
       defaultValue: 'Button',
     },
     preset: {
-      options: ['primary', 'default'],
+      options: ['default', 'primary', 'secondary'],
       control: 'radio',
       defaultValue: 'default',
     },
