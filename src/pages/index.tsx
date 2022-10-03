@@ -15,35 +15,35 @@ const Index = () => {
     >
       <div className="space-y-3">
         <div className="space-x-3">
-          <Button type="button" appearance="primary" size="sm">
+          <Button type="button" preset="primary" size="sm">
             Small Button
           </Button>
 
-          <Button type="button" appearance="primary">
+          <Button type="button" preset="primary">
             Medium Button
           </Button>
 
-          <Button type="button" appearance="primary" size="lg">
+          <Button type="button" preset="primary" size="lg">
             Large Button
           </Button>
         </div>
         <div className="space-x-3">
           <Button
             type="button"
-            appearance="primary"
+            preset="primary"
             size="sm"
             icon={<BookmarkIcon />}
           >
             Small Button
           </Button>
 
-          <Button type="button" appearance="primary" icon={<BookmarkIcon />}>
+          <Button type="button" preset="primary" icon={<BookmarkIcon />}>
             Medium Button
           </Button>
 
           <Button
             type="button"
-            appearance="primary"
+            preset="primary"
             size="lg"
             icon={<BookmarkIcon />}
           >
@@ -51,41 +51,41 @@ const Index = () => {
           </Button>
         </div>
         <div className="space-x-3">
-          <Button type="button" appearance="primary" size="sm" loading>
+          <Button type="button" preset="primary" size="sm" loading>
             Small Button
           </Button>
 
-          <Button type="button" appearance="primary" loading>
+          <Button type="button" preset="primary" loading>
             Medium Button
           </Button>
 
-          <Button type="button" appearance="primary" size="lg" loading>
+          <Button type="button" preset="primary" size="lg" loading>
             Large Button
           </Button>
         </div>
         <div className="space-x-3">
-          <Button type="button" appearance="primary" size="sm" disabled>
+          <Button type="button" preset="primary" size="sm" disabled>
             Small Button
           </Button>
 
-          <Button type="button" appearance="primary" disabled>
+          <Button type="button" preset="primary" disabled>
             Medium Button
           </Button>
 
-          <Button type="button" appearance="primary" size="lg" disabled>
+          <Button type="button" preset="primary" size="lg" disabled>
             Large Button
           </Button>
         </div>
         <div className="space-x-3">
-          <Button type="button" appearance="primary" size="sm" disabled>
+          <Button type="button" preset="primary" size="sm" disabled>
             Small Button
           </Button>
 
-          <Button type="button" appearance="primary" disabled>
+          <Button type="button" preset="primary" disabled>
             Medium Button
           </Button>
 
-          <Button type="button" appearance="primary" size="lg" disabled>
+          <Button type="button" preset="primary" size="lg" disabled>
             Large Button
           </Button>
         </div>

@@ -2,7 +2,13 @@ import type { FC } from 'react';
 import type React from 'react';
 import type { ButtonProps } from 'rsuite';
 
-type AdditionalType = {
+export type TPreset = 'default' | 'primary' | 'secondary' | 'ghost';
+
+type TAdditional = {
   icon?: React.ReactNode;
+  preset: TPreset;
 };
-export type ButtonType = FC<ButtonProps & AdditionalType>;
+
+type TOmitedButtonProps = Omit<ButtonProps, 'appearance'>;
+
+export type ButtonType = FC<TOmitedButtonProps & TAdditional>;

@@ -13,7 +13,7 @@ export default {
       control: { type: 'text' },
       defaultValue: 'Button',
     },
-    appearance: {
+    preset: {
       options: ['primary', 'default'],
       control: 'radio',
       defaultValue: 'default',
