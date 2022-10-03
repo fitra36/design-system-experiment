@@ -28,13 +28,15 @@ const Button: ButtonType = ({
   icon: Icon,
   children,
   className,
-  preset,
+  preset = 'default',
+  size = 'md',
   ...props
 }) => {
   const { appearance, className: generatedClassName } = styleGenerator[preset];
 
   return (
     <RButton
+      size={size}
       appearance={appearance}
       className={clsx(generatedClassName, className)}
       {...props}

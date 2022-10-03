@@ -22,6 +22,11 @@ export default {
       control: 'boolean',
       defaultValue: false,
     },
+    size: {
+      control: 'radio',
+      options: ['sm', 'md', 'lg'],
+      defaultValue: 'md',
+    },
     loading: {
       control: 'boolean',
       defaultValue: false,
